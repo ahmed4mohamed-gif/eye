@@ -1,0 +1,128 @@
+[
+  {
+    "product": "rutm50",
+    "file": "rutm50.png",
+    "source": "https://www.teltonika-networks.com/products/routers/rutm50",
+    "sha256": "07440c40ab8fe7424ff9d19a5045279ef5418745e7d328d42242319065d2f58d"
+  },
+  {
+    "product": "br2",
+    "file": "br2.png",
+    "source": "https://www.peplink.com/products/mobile-routers/max-br2-pro/",
+    "sha256": "fca8499ae9cdecee088e244acb080c9ff496d767c4ffb9046abae876b7acc11f"
+  },
+  {
+    "product": "streamax",
+    "file": "streamax.png",
+    "source": "https://www.streamax.com/products/A16MAX-IBCU.html",
+    "sha256": "f4576c1d0647bffff522885f178dd3ba8838a29eddaf8c70df24b36aa2ce1bfc"
+  },
+  {
+    "product": "howen",
+    "file": "howen.png",
+    "source": "https://www.howentech.com/vehicle-camera-2",
+    "sha256": "ea81565fde5c973fca21a24b99a4127af8edd0cc8ba7321b1d3587d5e76a47a3"
+  },
+  {
+    "product": "axis",
+    "file": "axis.png",
+    "source": "https://www.axis.com/en-gb/products/axis-p1485-le-kit",
+    "sha256": "948b44868b3be55d4ad1e003b72d3630d90784c2205ac476395eb552dcdb6e58"
+  },
+  {
+    "product": "hanwha",
+    "file": "hanwha.png",
+    "source": "https://www.hanwhavision.com/mea/products/product-details/tno-7180rlp",
+    "sha256": "0fee33ff8d20c5ec034faa52642c2e4e6696823b13f06d26be9a91a84550b89c"
+  },
+  {
+    "product": "gnom",
+    "file": "gnom.jpg",
+    "source": "https://e-shop.jv-technoton.com/product/gnom-dp-can/",
+    "sha256": "f4c08bf6444a1ad36a939afca07eab653a962582f85b3657d5f795da426442a1"
+  },
+  {
+    "product": "gnom",
+    "file": "gnomdde.jpg",
+    "source": "https://e-shop.jv-technoton.com/product/gnom-dde/",
+    "sha256": "15b764d085c61e82db3af5f07f2d68d61539c257935c6df4c3f860088d709dee"
+  },
+  {
+    "product": "airweigh",
+    "file": "airweigh.jpg",
+    "source": "https://www.air-weigh.com/loadmaxx/",
+    "sha256": "bcfc5e124c3871296eda2410ca7a54efcf8e761feff47fe402e1730897140fa4"
+  },
+  {
+    "product": "xperix",
+    "file": "xperix.png",
+    "source": "https://www.xperix.com/products/biomini-slim-2s",
+    "sha256": "91d4243e74c82feba2c0191bfa26c5f7339320cfd1502406ae96611177793542"
+  },
+  {
+    "product": "hid",
+    "file": "hid.png",
+    "source": "https://www.hidglobal.com/products/4500-fingerprint-reader",
+    "sha256": "52e24dd8f15b8d59b5431e40791a1088a408f890404a170584504a9a3b98e5e1"
+  },
+  {
+    "product": "adam",
+    "file": "adam.jpg",
+    "source": "https://www.advantech.com/en-us/products/a67f7853-013a-4b50-9b20-01798c56b090/adam-6017/mod_426ac8aa-4c77-4e4e-aed7-b41b9b387cf9",
+    "sha256": "cdc881c23c475367bd81fdde2d698622985ad1fe7e1b2226e73cbc58ead41197"
+  },
+  {
+    "product": "moxa",
+    "file": "moxa.jpg",
+    "source": "https://www.moxa.com/en/products/industrial-edge-connectivity/controllers-and-ios/universal-controllers-and-i-os/iologik-e1200-series/iologik-e1240",
+    "sha256": "89b55314d8f4086e9a2063b803a583b348acb8abf4a9912387207af265bb4263"
+  },
+  {
+    "product": "tsw",
+    "file": "tsw.png",
+    "source": "https://www.teltonika-networks.com/products/ethernet-switches/tsw101",
+    "sha256": "a5a6c3b4bb57904c933c11c14561b30bea3fa1b968dd68738c02463723e234fb"
+  },
+  {
+    "product": "planet",
+    "file": "planet.jpg",
+    "source": "https://www.planet.com.tw/en/product/igs-5225-8p4s-12v",
+    "sha256": "72bda04823e24ddf71deb0f81c083a6f0306066e6b7a5433797b5e552381707c"
+  },
+  {
+    "product": "poynting",
+    "file": "poynting.png",
+    "source": "https://poynting.tech/antennas/mimo-3-17/",
+    "sha256": "56e19fd3c71a2bcae892046b20e9bbd35939014920465c7c556ae068a1c7413d"
+  },
+  {
+    "product": "panorama",
+    "file": "panorama.jpg",
+    "source": "https://panorama-antennas.com/product/lgmhm4b-6-60-24-58-mako-4x4-mimo-4g-5g-up-to-6x6-mimo-wifi-gps-gnss-vehicle-antenna/",
+    "sha256": "4b73dd7d577947f47bcecc00292b93f6b2a509e3c7e123d7bff9bb2af1f70f64"
+  },
+  {
+    "product": "d2hw",
+    "file": "d2hw.jpg",
+    "source": "https://uk.rs-online.com/web/p/micro-switches/6160366",
+    "sha256": "0988168335a63db2fae6a785c80535547453d5a8ee4e0199ba7716872cda03ba"
+  },
+  {
+    "product": "zw",
+    "file": "zw.png",
+    "source": "https://automation.honeywell.com/us/en/products/sensing-solutions/switches-and-controls/basic-switches/zw-series-sealed-subminiature-basic-switch",
+    "sha256": "7891b7cd7e0b2bfa24f34e4e498f62f47f1d8bcfef451ad88d64ba0b1d9ebcbe"
+  },
+  {
+    "product": "bat120",
+    "file": "bat120.png",
+    "source": "https://www.teltonika-networks.com/products/accessories/powering-options/bat120-uninterruptible-power-supply",
+    "sha256": "b75b08f7daa63433a5086f1f0b9e5f39d127706d1074d33a03b1cb0c568c5f45"
+  },
+  {
+    "product": "openups",
+    "file": "openups.jpg",
+    "source": "https://www.mini-box.com/OpenUPS",
+    "sha256": "09774a0a6a4917859b100b6550784fd4ee2fefec9399d1d9959e101bb4129ca2"
+  }
+]

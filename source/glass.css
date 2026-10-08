@@ -1,0 +1,101 @@
+@font-face{font-family:Alexandria;src:url('./fonts/Alexandria.ttf') format('truetype');font-weight:100 900;font-display:swap}
+:root{--glass:linear-gradient(135deg,#f3f8ff1c,#eaf5ff08 45%,#b8d7e914);--edge:#ffffff25;--muted:#b3c1cc;--accent:#a2eddc}
+body,button,input,select{font-family:Alexandria, sans-serif}body{background:#111921;color:#f0f5f9}button{border-radius:12px}button:focus-visible,a:focus-visible{outline:2px solid var(--accent);outline-offset:4px}button:hover{color:#fff;background:#ffffff15}
+.topbar,body.operation>header,.inspector,.bottom-bar,.vehicle-selector,.view-tools,.views,.status-card,.transport,.ui-dock,dialog,.hotspot .label{background:var(--glass);backdrop-filter:blur(26px) saturate(145%);-webkit-backdrop-filter:blur(26px) saturate(145%);border:1px solid var(--edge);box-shadow:inset 0 1px 0 #ffffff18,0 14px 50px #0003;border-radius:22px}
+.workspace{display:block;height:100dvh;min-height:0}#stage{height:100%;background:radial-gradient(ellipse at 55% 48%,#35424c,#111921 75%)}
+.topbar,body.operation>header{position:fixed;inset:18px 24px auto;height:66px;padding:0 22px;z-index:10;gap:16px}.brand{font-size:20px}.brand-mark{font-size:30px}.brand small{font-size:8px}.mode-tabs{gap:20px}.mode-tabs button{font-size:12px}.mode-tabs button.selected:after{bottom:10px;border-radius:2px}.prototype{font-size:11px}.scene-heading,.heading{top:115px;right:40px}.scene-heading h1,.heading h1{font-size:clamp(26px,3vw,44px);font-weight:500;letter-spacing:-1px}.scene-heading p,.heading p{font-size:12px;color:var(--muted)}
+.inspector{position:fixed;left:24px;top:104px;bottom:110px;width:310px;padding:24px;z-index:7;transition:transform .25s,opacity .25s}.inspector h2{font-size:22px;margin-top:18px}.intro,.device-button small,.panel-note{color:var(--muted)}.device-button{padding:14px 0}.device-button strong{font-size:13px}.device-button .num{border:0;background:#ffffff12;color:var(--accent);border-radius:10px}.bottom-bar{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);width:max-content;max-width:calc(100% - 260px);height:auto;padding:9px 12px;z-index:9;gap:12px}.bottom-bar button{font-size:11px;padding:10px}.bottom-bar .environment,.quick-actions button{border:0;background:transparent}.bottom-bar .environment{position:static}.environment button.selected,.vehicle-selector button.selected{background:#ffffff18}.vehicle-selector{bottom:105px;border-radius:16px}.vehicle-selector span{display:none}.vehicle-selector button{font-size:11px;padding:10px 16px;border-radius:10px}.view-tools{left:auto;right:24px;padding:7px;gap:4px}.view-tools button{background:none;border:0}.scene-caption{bottom:168px;left:360px;right:40px}.hotspot .label{opacity:0;transform:translateY(4px);transition:.18s;border-radius:10px;font-size:11px;padding:8px 11px;pointer-events:none}.hotspot:hover .label,.hotspot:focus-visible .label{opacity:1;transform:none}.hotspot .dot{width:20px;height:20px;background:#b9f6e640;border-color:#d7fff5;box-shadow:0 0 0 4px #ddfff014}.hotspot .dot:after{width:5px;height:5px}.hotspot{filter:none}
+.ui-dock{position:fixed;bottom:22px;right:24px;z-index:50;display:flex;padding:6px;gap:4px;border-radius:18px}.ui-dock button{display:flex;align-items:center;justify-content:center;width:40px;height:40px;padding:10px;border:0;background:transparent}.ui-dock svg,button.icon-button svg{width:20px;height:20px;stroke:currentColor;fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}.panel-hidden .inspector{transform:translateX(-350px);opacity:0;pointer-events:none}.panel-hidden .scene-caption{left:40px}
+.ui-hidden .topbar,.ui-hidden>header,.ui-hidden .inspector,.ui-hidden .bottom-bar,.ui-hidden .scene-heading,.ui-hidden .heading,.ui-hidden .vehicle-selector,.ui-hidden .view-tools,.ui-hidden .scene-caption,.ui-hidden #hotspots,.ui-hidden .views,.ui-hidden .status-card,.ui-hidden .environment,.ui-hidden .transport,.ui-hidden .driver-note{visibility:hidden;pointer-events:none}.ui-hidden .ui-dock{opacity:.65}.ui-hidden .ui-dock:hover{opacity:1}
+body.operation main{height:100dvh;min-height:0}.operation .views{top:108px;left:24px;padding:6px}.operation .views button{background:transparent;border:0}.operation .status-card{right:24px;bottom:210px;width:260px}.operation .transport{left:24px;right:150px;bottom:24px;padding:16px 20px}.operation .environment{left:24px;bottom:205px;border-radius:16px;background:var(--glass);backdrop-filter:blur(20px);border:1px solid var(--edge);padding:5px}.operation .driver-note{display:none}.operation .chapters button{font-size:10px}.operation .primary,.primary{background:#c7f4e7;color:#13372e;border-radius:12px;font-weight:500}.operation .review{border-radius:20px}.operation .heading{top:108px}.operation .status-card p{font-size:12px;color:var(--muted)}.product-visual{width:100%;height:150px;object-fit:contain;border-radius:14px;background:#e8edf1;padding:15px;margin:12px 0}.product-visual-note{font-size:10px;color:var(--muted)}
+@supports not (backdrop-filter:blur(10px)){.topbar,.inspector,.bottom-bar,.ui-dock,.transport,.status-card,dialog{background:#25313bf5}}
+@media(max-width:900px){.topbar,body.operation>header{inset:12px 12px auto;padding:0 14px;height:60px}.brand small,.prototype,.scene-heading p,.mode-tabs button[data-mode=operations]{display:none}.brand{font-size:16px}.mode-tabs{gap:8px}.mode-tabs button{font-size:10px}.inspector{left:12px;top:88px;bottom:100px;width:min(310px,calc(100vw - 24px))}.bottom-bar{left:12px;right:115px;transform:none;max-width:none;overflow:auto;justify-content:flex-start;bottom:16px}.bottom-bar .quick-actions{display:none}.ui-dock{right:12px;bottom:16px}.scene-heading,.heading{right:24px;top:95px}.vehicle-selector{bottom:94px}.vehicle-selector button{padding:9px;font-size:10px}.scene-caption{display:none}.operation .transport{right:12px;left:12px;bottom:82px}.operation .status-card{top:180px;bottom:auto;right:16px;width:220px;padding:14px}.operation .environment{bottom:20px;left:12px}.operation .views{top:90px;left:12px}.operation .heading{top:93px}.operation .status-card p{display:none}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
+/* Right-hand sidebar: explicit physical sides override legacy responsive layouts. */
+.inspector{left:auto;right:24px;width:340px;max-width:calc(100vw - 48px);top:148px;bottom:110px;overflow-x:hidden;overflow-y:auto;scrollbar-width:thin;scrollbar-gutter:stable;padding:24px;min-height:0;max-height:none}
+.panel-hidden .inspector{transform:translateX(calc(100% + 40px));opacity:0;visibility:hidden;pointer-events:none}
+.sidebar-toggle{position:fixed;right:24px;top:100px;z-index:20;display:flex;align-items:center;gap:9px;padding:10px 16px;min-height:40px;border:1px solid var(--edge);border-radius:14px;background:#253c46e8;backdrop-filter:blur(24px);box-shadow:inset 0 1px 0 #ffffff18,0 5px 20px #0002;font-size:12px;color:#eff8f6}
+.sidebar-toggle svg{width:19px;height:19px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.ui-hidden .sidebar-toggle{visibility:hidden;pointer-events:none}
+body:not(.operation) .scene-heading{right:400px;left:40px}
+body:not(.operation) .view-tools{right:auto;left:24px}
+.scene-caption{left:40px;right:400px}.panel-hidden .scene-caption{right:40px}
+.panel-hidden .scene-heading{right:40px}
+.inspector .stat-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:20px 0}
+.inspector .stat-grid>div{display:flex;flex-direction:column;align-items:flex-start;gap:8px;min-width:0;padding:12px 10px;background:#ffffff08;border:1px solid #ffffff12;border-radius:12px}
+.inspector .stat-grid small{display:block;font-size:11px;line-height:1.8;color:var(--muted)}
+.inspector .stat-grid strong{display:block;font-size:19px;line-height:1.6;overflow-wrap:anywhere}
+.inspector .scenario-button{display:flex;justify-content:space-between;align-items:center;gap:12px;width:100%;text-align:right;padding:13px 14px;line-height:1.8}
+.inspector .scenario-button span:first-child{min-width:0;overflow-wrap:break-word}.inspector .scenario-button span:last-child{flex:none}
+.inspector .journey-controls{display:grid;gap:10px}.inspector .primary,.inspector .secondary{max-width:100%;white-space:normal;line-height:1.8}
+@media(max-width:900px){.inspector{left:auto;right:12px;top:132px;bottom:96px;width:min(340px,calc(100vw - 24px));max-width:calc(100vw - 24px);padding:20px}.sidebar-toggle{top:84px;right:12px}body:not(.operation) .scene-heading{right:24px;left:24px;top:140px}body:not(.operation):not(.panel-hidden) .scene-heading{visibility:hidden}.panel-hidden .inspector{transform:translateX(calc(100% + 24px))}}
+/* Non-blocking loading status: the live scene remains visible. */
+.operation #load-screen{inset:auto auto 184px 24px;display:block;width:260px;background:transparent;overflow:visible;pointer-events:none}
+.operation #load-screen>img{display:none}
+.operation #load-screen>div{min-width:0;padding:14px 18px;gap:10px;text-align:right;border-radius:16px;background:#172a32cc;backdrop-filter:blur(18px);box-shadow:0 8px 30px #0002}
+.operation #load-screen b{font-size:13px;font-weight:500}.operation #load-screen span{font-size:11px}.operation #load-screen progress{height:3px}.operation #load-screen button{pointer-events:auto}
+#loading{inset:auto auto 170px 24px;padding:12px 18px;border-radius:16px;background:#172a32cc;backdrop-filter:blur(18px);flex-direction:row;gap:12px;pointer-events:none}#loading p{font-size:12px;margin:0}#loading .loader-ring{width:18px;height:18px}
+@media(max-width:900px){.operation #load-screen{left:12px;bottom:240px;width:220px}#loading{left:12px;bottom:150px}}
+.product-card{min-width:0;padding:20px;border:1px solid #ffffff20;border-radius:20px;background:linear-gradient(145deg,#ffffff0b,#ffffff03);overflow:hidden}
+.product-card-heading{display:block;position:static;height:auto;padding:0;margin:0 0 16px;border:0;background:none;backdrop-filter:none}
+.product-card-heading h3{font-size:19px;line-height:1.5;margin:7px 0 0;overflow-wrap:anywhere;color:#f0faf7}
+.product-photos{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:12px}
+.product-photos figure{margin:0;min-width:0}
+.product-photo-link{display:flex;align-items:center;justify-content:center;height:190px;padding:14px;border-radius:14px;background:#f5f6f3;border:1px solid #ffffff35}
+.product-photos img{display:block;max-width:100%;width:100%;height:100%;max-height:165px;object-fit:contain;background:transparent;border-radius:0}
+.product-photos figcaption{font-size:11px;line-height:1.8;color:#afc9cc;padding:8px 2px;min-height:36px}
+.product-card .product-purpose{color:#e3eeec;font-size:15px;line-height:1.9;margin-top:16px}
+.product-card .product-links{flex-wrap:wrap;gap:12px;font-size:12px;border-top:1px solid #ffffff17;padding-top:14px}
+.product-card .photo-credits{margin-top:12px}.product-card .photo-credits summary{font-size:12px}.product-card .photo-credits p{font-size:11px}
+.vendor-group>.info-grid{align-items:start}.catalogue-note{font-size:12px;color:#a2bdc2;line-height:1.9}
+@media(max-width:600px){.vendor-group>.info-grid{grid-template-columns:1fr}.product-card{padding:16px}.product-photo-link{height:180px}}
+.device-photo-preview{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:18px 0 8px}
+.device-photo-preview button{min-width:0;padding:10px;border:1px solid #ffffff25;border-radius:14px;background:#ffffff09;text-align:center}
+.device-photo-preview img{width:100%;height:95px;object-fit:contain;background:#f5f6f3;border-radius:9px;padding:8px}
+.device-photo-preview span{display:block;font-size:11px;line-height:1.7;margin-top:8px;overflow-wrap:anywhere}
+.device-photo-preview button:hover{border-color:#7ceace;background:#7ceace12}
+.illustration-guide{direction:rtl;text-align:start;max-width:100%;font-size:15px;line-height:1.95}
+.illustration-guide h2{font-size:clamp(23px,3vw,32px);line-height:1.55;margin-bottom:14px}
+.illustration-guide .guide-intro{font-size:16px;color:#e1f2ed;margin:0 0 22px}
+.illustration-guide section{margin:26px 0}
+.illustration-guide h3{font-size:18px;line-height:1.6;color:#8fe3cf;margin:0 0 12px}
+.illustration-guide h4{font-size:15px;line-height:1.8;color:#e6f3f0;margin:0 0 8px}
+.illustration-guide p{margin:8px 0 16px;line-height:1.95;color:#bed0d5}
+.guide-figure{margin:20px 0 26px}.guide-figure .diagram{margin:0;width:100%;height:auto;max-height:none;object-fit:contain;border-radius:14px}
+.guide-figure figcaption{margin-top:8px;font-size:12px;line-height:1.8;color:#a1bcc1}
+.guide-parts{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.guide-parts article{padding:18px;border:1px solid #ffffff20;border-radius:14px;background:#ffffff06}
+.guide-parts p{font-size:14px;margin-bottom:0}
+.guide-steps{padding-inline-start:28px;margin:0}.guide-steps li{padding:7px 6px;line-height:1.9;color:#d7e6e5}.guide-steps li::marker{color:#7ceace;font-weight:700}
+.illustration-guide .guide-example{padding:20px;border-inline-start:3px solid #7ceace;border-radius:12px;background:#7ceace0d}
+.guide-example p:last-child{margin-bottom:0}
+.guide-terms{margin:16px 0;display:grid;gap:10px}.guide-terms>div{padding:12px 16px;background:#ffffff06;border-radius:10px}.guide-terms dt{font-weight:600;color:#e2edea}.guide-terms dd{margin:4px 0 0;font-size:14px;color:#b5cbd0}
+.illustration-guide .secondary{display:block;width:100%;line-height:1.8;margin-top:22px}
+@media(max-width:600px){.guide-parts{grid-template-columns:1fr}.guide-parts article{padding:14px}.illustration-guide .guide-example{padding:16px}.illustration-guide .guide-intro{font-size:15px}}
+
+/* Keep operation text readable against bright desert backgrounds. */
+body.operation>header,.operation .status-card,.operation .transport,.operation .environment{background:rgba(13,30,37,.88);color:#eff6f5}
+.operation .heading{padding:12px 18px;border-radius:16px;background:rgba(13,30,37,.8);max-width:calc(100% - 370px)}
+.operation .heading h1{font-size:clamp(22px,2.4vw,36px);margin:4px 0;letter-spacing:0}
+.operation .heading p,.operation .status-card p{color:#d5e4e2}
+.operation .camera-controls{width:275px;background:transparent;border:0;box-shadow:none;backdrop-filter:none;overflow:visible}
+.operation .camera-controls #camera-panel-toggle{background:#12272eef;color:#f0faf7;border:1px solid #79d9c266;border-radius:14px;padding:10px 16px}
+.operation .camera-controls #camera-panel{background:#12272ef5;max-height:calc(100dvh - 345px);overflow-y:auto;padding:14px}
+.operation .camera-grid button{font-size:12px;line-height:1.7;padding:8px;border:1px solid #ffffff20;border-radius:10px;color:#ecf6f4}
+.operation .camera-controls button[aria-pressed="true"]{background:#78e4c8;color:#102d27;border-color:#78e4c8}
+.operation .camera-controls label[hidden]{display:none}
+.operation .camera-controls #camera-auto{width:100%;padding:9px;border-radius:10px}
+.operation .camera-controls small{font-size:11px;color:#d1dfdc}
+@media(max-width:700px){.operation .camera-controls{width:225px}.operation .heading{max-width:calc(100% - 40px);top:85px;right:20px}.operation .heading h1{font-size:20px}.operation .heading p{display:none}.operation .camera-controls{top:165px}.operation .camera-controls #camera-panel{max-height:calc(100dvh - 405px)}}
+
+.sound-controls{position:fixed;left:24px;top:90px;z-index:11;background:#10272ef5;border:1px solid #ffffff30;border-radius:12px;padding:8px 12px;display:flex;gap:9px;align-items:center;color:#ecf6f4;font-size:11px}.sound-controls button{padding:7px;border-radius:8px;background:#24444a;color:#eff6f5;border:1px solid #ffffff30}.sound-controls input{width:75px;accent-color:#7be6c9}.sound-controls small{max-width:145px;font-size:9px}.operation .camera-controls{top:160px}#steering-horn{position:fixed;width:48px;height:48px;transform:translate(-50%,-50%);border:1px solid #8debd650;border-radius:50%;background:#8debd610;z-index:8;cursor:pointer;touch-action:none}#steering-horn[hidden]{display:none}#steering-horn:active{background:#8debd660}.ui-hidden .sound-controls{visibility:hidden}@media(max-width:700px){.sound-controls{top:auto;bottom:10px;left:10px;right:70px;flex-wrap:wrap}.sound-controls small{display:none}.operation .camera-controls{top:165px}}
+
+.hotspot .dot:after{content:''!important;width:7px;height:7px;position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);border-radius:50%;background:#c4ffec}.hotspot .dot{position:relative}.seat-hotspot .dot{background:#194e4c;border-color:#98ffe0;box-shadow:0 0 0 6px #76ebc92b}.hotspot.is-hidden{display:none!important}.seat-return{position:absolute;left:50%;transform:translateX(-50%);bottom:170px;z-index:12;background:#102b32ed;color:#d5fff0;border:1px solid #8cdcc7;border-radius:14px;padding:12px 20px;font-family:inherit;cursor:pointer}.seat-return[hidden]{display:none}
+
+.cab-seat-dot{position:fixed;transform:translate(-50%,-50%);z-index:8;border:0;background:none;color:#dcfff4;font-family:inherit;cursor:pointer}.cab-seat-dot i{display:block;margin:auto;width:18px;height:18px;background:#91f5d7;border:2px solid #ecfff8;border-radius:50%;box-shadow:0 0 0 5px #387d7080}.cab-seat-dot span{display:block;margin-top:8px;background:#102c33ef;padding:5px 9px;border-radius:8px;font-size:11px}.cab-seat-dot[hidden]{display:none}.ui-hidden .cab-seat-dot{visibility:hidden}
+
+/* H keeps camera selection available during the transport experience. */
+body.operation.ui-hidden .camera-controls{visibility:visible;pointer-events:auto}
+body.operation.ui-hidden .ui-dock,body.operation.ui-hidden .seat-return,body.operation.ui-hidden #steering-horn{visibility:hidden;pointer-events:none}
+
+#ain-boot{position:fixed;inset:0;z-index:100000;display:grid;place-items:center;background:#10242b;color:#edf8f6;text-align:center;padding:24px}#ain-boot[hidden]{display:none}#ain-boot>div{width:min(440px,90vw)}#ain-boot h1{font-size:clamp(38px,6vw,64px);margin:16px 0}#ain-boot progress{width:100%;height:12px;accent-color:#79e7ce}#ain-boot p{line-height:1.8}#ain-boot button{padding:12px 24px;border-radius:14px}#loading,#load-screen{visibility:hidden}

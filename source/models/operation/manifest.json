@@ -1,0 +1,122 @@
+{
+  "version": "v014",
+  "complete": true,
+  "quality": "Original exported geometry and image resolution; no decimation or Draco",
+  "duration": 305.9666666666667,
+  "loadingDuration": 75.96666666666667,
+  "driverReady": true,
+  "assets": [
+    {
+      "asset": "car-1",
+      "source": "outputs\\blender-preparation\\web-v012-fixes\\car-1.glb",
+      "bytes": 5285324,
+      "sha256": "917a0b4b82fad2366d9727acdc0faae4f0d4ee8b096c6cbfc2375e96c3a02b83",
+      "meshes": 29,
+      "images": 9,
+      "animation_channels": 22
+    },
+    {
+      "asset": "actros",
+      "source": "outputs\\blender-preparation\\web-v012-fixes\\actros.glb",
+      "bytes": 37590576,
+      "sha256": "188f6af12a4d7a6e77b80e3f24f3d38f39fd58e5751c9e3f2988c8b0027d39f3",
+      "meshes": 472,
+      "images": 4,
+      "animation_channels": 1
+    },
+    {
+      "asset": "driver",
+      "source": "outputs\\blender-preparation\\web-v013-driver\\driver.glb",
+      "bytes": 18195624,
+      "sha256": "077522d6439bd97060a88507804955eb0a146820708f31ee506aa7ce732694aa",
+      "meshes": 10,
+      "images": 11,
+      "animation_channels": 202
+    },
+    {
+      "asset": "car-2",
+      "source": "outputs\\blender-preparation\\web-v011-full\\car-2.glb",
+      "bytes": 24631360,
+      "sha256": "004d7914899ce3c65c586fd0447c7e04c063eace4fc187fa060d19ad597b06af",
+      "meshes": 98,
+      "images": 28,
+      "animation_channels": 6
+    },
+    {
+      "asset": "car-3",
+      "source": "outputs\\blender-preparation\\web-v011-full\\car-3.glb",
+      "bytes": 3392956,
+      "sha256": "0cd21b350e3c67ccec7e8e267ee78f7f3c44a0e5ced24f02be0ca80ec93b495b",
+      "meshes": 30,
+      "images": 8,
+      "animation_channels": 21
+    },
+    {
+      "asset": "car-4",
+      "source": "outputs\\blender-preparation\\web-v011-full\\car-4.glb",
+      "bytes": 13125992,
+      "sha256": "2d59c3690c970e186a9b33d06d24d426c041f6efd2f8bc4855d0ee2295a615a6",
+      "meshes": 52,
+      "images": 28,
+      "animation_channels": 10
+    },
+    {
+      "asset": "car-5",
+      "source": "outputs\\blender-preparation\\web-v011-full\\car-5.glb",
+      "bytes": 73308080,
+      "sha256": "16396c80fcce6567f52eb1269eca026da2c4fcd30671389172cbd488652e98e4",
+      "meshes": 202,
+      "images": 75,
+      "animation_channels": 807
+    },
+    {
+      "asset": "car-6",
+      "source": "outputs\\blender-preparation\\web-v011-full\\car-6.glb",
+      "bytes": 38448752,
+      "sha256": "6931d290ce4b799d7a8846f5ee93f65dc6c1915789ddd4876ac032d1224f8e9c",
+      "meshes": 151,
+      "images": 35,
+      "animation_channels": 6
+    },
+    {
+      "asset": "car-7",
+      "source": "outputs\\blender-preparation\\web-v013-remaining\\car-7.glb",
+      "bytes": 21967416,
+      "sha256": "f7b6c8b43bf9b58a56e0b2073eb88ad74b85e930dab4899e410ca38bd74c68c2",
+      "meshes": 766,
+      "images": 28,
+      "animation_channels": 10
+    },
+    {
+      "asset": "car-8",
+      "source": "outputs\\blender-preparation\\web-v013-remaining\\car-8.glb",
+      "bytes": 52483752,
+      "sha256": "1bea2358609f42f42f393a31aaccebca99a54ed46887288b5915ca41d77a9c84",
+      "meshes": 253,
+      "images": 76,
+      "animation_channels": 549
+    },
+    {
+      "asset": "carrier",
+      "source": "outputs\\blender-preparation\\web-v013-remaining\\carrier.glb",
+      "bytes": 14953488,
+      "sha256": "73b68bc4d7e38cddb177fa51a43853e95e875ef9d09b71792f3ded8535aba00b",
+      "meshes": 550,
+      "images": 7,
+      "animation_channels": 56
+    },
+    {
+      "asset": "yard",
+      "source": "outputs\\blender-preparation\\web-v013-remaining\\yard.glb",
+      "bytes": 7150616,
+      "sha256": "84a2c4245f12eccb2c7e741a7cb2bfbd650002f2336fd46c814feed04bbf568b",
+      "meshes": 17,
+      "images": 6,
+      "animation_channels": 15
+    }
+  ],
+  "validation": "Driver 18 frames / all joint positions: maximum 0.414 mm. Browser visual/GPU memory review remains pending.",
+  "revision": "v015",
+  "driverMotion": "alternating planted steps and fixed climbing hand targets",
+  "wheelFixes": "stationary brake calipers on cars 4 and 6; remaining axis audit pending"
+}

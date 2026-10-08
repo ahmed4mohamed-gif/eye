@@ -1,0 +1,631 @@
+[
+  {
+    "title": "الراوتر: إزاي الناقلة تتصل بالمنصة؟",
+    "decision": "الراوتر بينقل البيانات. وجود شريحتين مش معناه إن الاتنين شغالين مع بعض؛ ده بيتوقف على عدد المودمات وطريقة إعداد الجهاز.",
+    "products": [
+      {
+        "key": "rutm50",
+        "company": "Teltonika Networks",
+        "model": "RUTM50",
+        "spec": "5G SA/NSA · Dual SIM · 5 × GbE",
+        "install": "بيتثبت جوّه الكابينة، وبيتوصّل بأجهزة الشبكة وبهوائيات مناسبة على السقف.",
+        "risk": "الصفحة الحالية بتعرض الجهاز للاستخدام عالميًا. بنراجع رقم الطلب والترددات واعتماد النسخة في بلد التشغيل؛ الاسم لوحده مش كفاية.",
+        "test": "بنفصل شبكة المحمول الأساسية ونجرب الانتقال للشريحة التانية، ونراجع وقت الرجوع للاتصال.",
+        "docs": "https://wiki.teltonika-networks.com/view/QSG_RUTM50",
+        "extra": "فيه مودم خلوي واحد وخمس فتحات شبكة جيجابت. شريحتين بيساعدوا في التبديل بين الشبكات، مش اتصالين خلويين نشطين مع بعض. طريقة إدارة الجهاز ورفع البيانات بتتظبط حسب تصميم المشروع.",
+        "url": "https://www.teltonika-networks.com/products/routers/rutm50",
+        "commercial_status": "السعر والتوفر والضمان المحلي لسه محتاجين عرض رسمي من المورد. المقارنة دي مش تأكيد شراء أو اعتماد نهائي للجهاز.",
+        "explanation": "ده راوتر خلوي بمودم واحد. بنراجع النسخة الإقليمية والترددات قبل اختياره للمشروع.",
+        "specExplanation": "5G هو جيل الاتصال، وGbE منافذ شبكة بسرعة اسمية جيجابت. السرعة الفعلية بتتأثر بالتغطية والشبكة والحمل.",
+        "reviewedAt": "2026-10-02",
+        "docsLabel": "المواصفات والوثائق",
+        "photos": [
+          {
+            "file": "rutm50.png",
+            "label": "RUTM50",
+            "caption": "صورة RUTM50 من صفحة المنتج.",
+            "credit": "Teltonika Networks",
+            "sourcePage": "https://www.teltonika-networks.com/products/routers/rutm50",
+            "width": 1920,
+            "height": 2138
+          }
+        ]
+      },
+      {
+        "key": "br2",
+        "company": "Peplink",
+        "model": "BR2 Pro",
+        "spec": "2 × 5G modems · 4 SIM slots · Wi-Fi 6",
+        "install": "بيتوصّل بشبكة الأجهزة، ومع كل مودم هوائياته المناسبة. مكان رفع البيانات بيتحدد في إعداد المشروع.",
+        "risk": "أربع فتحات شرائح مش معناهم أربع شبكات نشطة. تجميع اتصال الشبكتين محتاج إعداد وخدمة أو ترخيص مناسب.",
+        "test": "بنجرب فصل كل شبكة لوحدها، ونراقب وصول الأحداث والفيديو وتكلفة البيانات.",
+        "docs": "https://www.peplink.com/compare/tech-specs/br2-pro.pdf",
+        "extra": "فيه مودمين ويدعم Wi-Fi 6. دخل PoE بيغذي الراوتر نفسه؛ مش خرج لتغذية الكاميرات. بنراجع نسخة العتاد والبرنامج والترددات قبل الشراء.",
+        "url": "https://www.peplink.com/products/mobile-routers/max-br2-pro/",
+        "commercial_status": "السعر والتوفر والضمان المحلي لسه محتاجين عرض رسمي من المورد. المقارنة دي مش تأكيد شراء أو اعتماد نهائي للجهاز.",
+        "explanation": "ده راوتر بمودمين خلويين. ممكن نستفيد من شبكتين حسب الإعداد والاشتراك؛ أما تجميع الاتصال فله متطلبات وترخيص لازم نراجعهم.",
+        "specExplanation": "فيه مودمين للاتصال الخلوي وأربع فتحات شرائح. كل مودم بيستخدم شريحة نشطة في الوقت نفسه، حسب الإعداد.",
+        "reviewedAt": "2026-10-02",
+        "docsLabel": "المواصفات والوثائق",
+        "photos": [
+          {
+            "file": "br2.png",
+            "label": "BR2 Pro",
+            "caption": "صورة BR2 Pro من صفحة المنتج.",
+            "credit": "Peplink",
+            "sourcePage": "https://www.peplink.com/products/mobile-routers/max-br2-pro/",
+            "width": 1366,
+            "height": 768
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "مسجل الفيديو: بنحفظ اللي حصل فين؟",
+    "decision": "المسجل بيحفظ فيديو الكاميرات، علشان نقدر نرجع للحظة تحميل أو تفريغ معينة. لازم نجرب التسجيل من غير إنترنت قبل ما نعتمد الجهاز.",
+    "products": [
+      {
+        "key": "streamax",
+        "company": "Streamax",
+        "model": "A16MAX / IBCU",
+        "spec": "5G · Edge AI · Central processing",
+        "install": "وحدة مركزية جوّه الكابينة، مع كاميرات وملحقات متوافقة مع النسخة المطلوبة.",
+        "risk": "المنتج موجه للنقل العام أساسًا؛ ملاءمته للناقلة وقراءة اللوحات محتاجين تجربة وترخيص واضح.",
+        "test": "بنجرب تسجيل فيديو واستخراجه محليًا، وبنطلب أدوات الربط مع برنامجنا من المورد.",
+        "docs": "https://www.streamax.com/products/A16MAX-IBCU.html",
+        "extra": "عدد القنوات والتخزين والتحليلات بيتحدد حسب التكوين. بنطلب قائمة الملحقات ودليل التوصيل والتراخيص بدل ما نفترض إن كل وظيفة مذكورة متاحة في أي نسخة.",
+        "url": "https://www.streamax.com/products/A16MAX-IBCU.html",
+        "commercial_status": "السعر والتوفر والضمان المحلي لسه محتاجين عرض رسمي من المورد. المقارنة دي مش تأكيد شراء أو اعتماد نهائي للجهاز.",
+        "explanation": "دي وحدة بتجمع التسجيل والمعالجة وبعض وظائف الاتصال. الوظائف المتاحة بتختلف حسب النسخة والملحقات والترخيص.",
+        "specExplanation": "المعالجة على الجهاز معناها إنه يقدر ينفذ وظائف مدعومة محليًا. الوظائف الفعلية وعدد الكاميرات بيتحددوا في النسخة والترخيص.",
+        "reviewedAt": "2026-10-02",
+        "docsLabel": "المواصفات والوثائق",
+        "photos": [
+          {
+            "file": "streamax.png",
+            "label": "A16MAX / IBCU",
+            "caption": "صورة A16MAX / IBCU من صفحة المنتج.",
+            "credit": "Streamax",
+            "sourcePage": "https://www.streamax.com/products/A16MAX-IBCU.html",
+            "width": 5000,
+            "height": 2813
+          }
+        ]
+      },
+      {
+        "key": "howen",
+        "company": "Howen",
+        "model": "Hero-ME31-08 V5",
+        "spec": "8 × 1080p + 4 IPC · 4G · 8–36 VDC",
+        "install": "بيتوصّل بالكاميرات من المداخل المخصصة ليها، ومعاه تخزين مناسب لاهتزاز المركبة وتغذية محمية.",
+        "risk": "الاتصال المدمج المذكور 4G. رفع الفيديو عن طريق راوتر خارجي محتاج تأكيد طريقة الربط وتوافق البرنامج.",
+        "test": "بنشغّل الكاميرات المطلوبة مع بعض، ونجرّب استخراج فيديو ورجوع التسجيل بعد فصل الكهرباء.",
+        "docs": "https://www.howentech.com/vehicle-camera-2",
+        "extra": "المواصفات المنشورة بتذكر 8 مداخل فيديو 1080p و4 كاميرات شبكة، وتغذية 8–36 فولت. وظائف متابعة السائق والتعرف على الوجه بتختلف حسب التكوين، ومش بديل تلقائي لنظام بصمة السائق.",
+        "url": "https://www.howentech.com/vehicle-camera-2",
+        "commercial_status": "السعر والتوفر والضمان المحلي لسه محتاجين عرض رسمي من المورد. المقارنة دي مش تأكيد شراء أو اعتماد نهائي للجهاز.",
+        "explanation": "ده مسجل للمركبات. بنختبر توافق الكاميرات مع مداخله وطريقة إرسال الأحداث للمنصة.",
+        "specExplanation": "عدد القنوات هو عدد الكاميرات اللي الجهاز يقدر يستقبلها، حسب نوعها وجودة التسجيل وإعداداته.",
+        "reviewedAt": "2026-10-02",
+        "docsLabel": "المواصفات والوثائق",
+        "photos": [
+          {
+            "file": "howen.png",
+            "label": "Hero-ME31-08 V5",
+            "caption": "صورة Hero-ME31-08 V5 من صفحة المنتج.",
+            "credit": "Howen",
+            "sourcePage": "https://www.howentech.com/vehicle-camera-2",
+            "width": 445,
+            "height": 331
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "كاميرات اللوحات: بنعرف العربية إزاي؟",
+    "decision": "الكاميرا بتصور اللوحة، وبرنامج القراءة بيحاول يحول صورتها لحروف وأرقام. لازم اللوحة تبقى باينة والإضاءة وزاوية التصوير مناسبين.",
+    "products": [
+      {
+        "key": "axis",
+        "company": "Axis Communications",
+        "model": "P1485-LE Kit",
+        "spec": "2 MP · LP Verifier · PoE Class 3",
+        "install": "بتتوجه لمكان مرور اللوحة بزاوية ومسافة مناسبين، وبتتوصل بسويتش وتغذية متوافقين.",
+        "risk": "مسافة القراءة المناسبة للبوابات مش بالضرورة تنفع على الناقلة. لازم اللوحة تبقى باينة من غير حجب.",
+        "test": "بنجرب لوحات فعلية بالنهار وبالليل، وبنراجع الصورة والرقم المقروء وطريقة إرسالهم للنظام.",
+        "docs": "https://help.axis.com/en-us/axis-p1485-le-kit",
+        "extra": "الطقم بيجمع كاميرا مع برنامج قراءة لوحات. الدقة المكتوبة مش ضمان نجاح القراءة في كل وضع؛ بنراجع العدسة والإضاءة واللغة المدعومة في التجربة.",
+        "url": "https://www.axis.com/en-gb/products/axis-p1485-le-kit",
+        "commercial_status": "السعر والتوفر والضمان المحلي لسه محتاجين عرض رسمي من المورد. المقارنة دي مش تأكيد شراء أو اعتماد نهائي للجهاز.",
+        "explanation": "دي كاميرا مع برنامج لقراءة اللوحات. بنختبرها في مكان الالتقاط الفعلي قبل اعتمادها للناقلة.",
+        "specExplanation": "الدقة لوحدها مش كفاية؛ بنجرب العدسة والمسافة وسرعة العربية، وبنراجع النتيجة على لوحات فعلية.",
+        "reviewedAt": "2026-10-02",
+        "docsLabel": "المواصفات والوثائق",
+        "photos": [
+          {
+            "file": "axis.png",
+            "label": "P1485-LE Kit",
+            "caption": "صورة P1485-LE Kit من صفحة المنتج.",
+            "credit": "Axis Communications",
+            "sourcePage": "https://www.axis.com/en-gb/products/axis-p1485-le-kit",
+            "width": 1600,
+            "height": 1600
+          }
+        ]
+      },
+      {
+        "key": "hanwha",
+        "company": "Hanwha Vision",
+        "model": "TNO-7180RLP",
+        "spec": "3 MP · Global shutter · Road AI",
+        "install": "بتتركب على حامل ثابت. بنراجع العدسة ومصدر الكهرباء قبل اختيار الكابل والسويتش.",
+        "risk": "تغذيتها محتاجة مراجعة HPoE أو 12 فولت حسب الدليل. ما نفترضش إن أي منفذ PoE عادي هيشغلها.",
+        "test": "بنجرب التصوير قريب وبعيد، والوهج والاهتزاز، ونراجع قراءة اللوحات المطلوبة.",
+        "docs": "https://supportportal.hanwhavision.com/global/products/TNO-7180RLP-en",
+        "extra": "دي كاميرا موجهة لتصوير لوحات المركبات المتحركة. تحملها للعوامل الخارجية مش دليل لوحده على ملاءمتها للاهتزاز المستمر فوق الناقلة.",
+        "url": "https://www.hanwhavision.com/mea/products/product-details/tno-7180rlp",
+        "commercial_status": "السعر والتوفر والضمان المحلي لسه محتاجين عرض رسمي من المورد. المقارنة دي مش تأكيد شراء أو اعتماد نهائي للجهاز.",
+        "explanation": "دي كاميرا موجهة لتطبيقات الطرق. بنراجع حجمها وعدستها وتغذيتها علشان نعرف هل مناسبة لمكاننا.",
+        "specExplanation": "الدقة لوحدها مش كفاية؛ بنجرب العدسة والمسافة وسرعة العربية، وبنراجع النتيجة على لوحات فعلية.",
+        "reviewedAt": "2026-10-02",
+        "docsLabel": "المواصفات والوثائق",
+        "photos": [
+          {
+            "file": "hanwha.png",
+            "label": "TNO-7180RLP",
+            "caption": "صورة TNO-7180RLP من صفحة المنتج.",
+            "credit": "Hanwha Vision",
+            "sourcePage": "https://www.hanwhavision.com/mea/products/product-details/tno-7180rlp",
+            "width": 2000,
+            "height": 2000
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "حساسات الحمولة: إيه اللي اتغير فوق الناقلة؟",
+    "decision": "الحساس بيساعدنا نتابع تغير الحمولة بعد المعايرة. القراءة لوحدها ما بتقولش نوع العربية أو رقم لوحتها، فبنربطها بالصورة وباقي بيانات الحدث.",
+    "products": [
+      {
+        "key": "gnom",
+        "company": "Technoton",
+        "model": "GNOM DDE / DP CAN",
+        "spec": "DDE: 0.25–3.8 V · DP CAN: J1939",
+        "install": "GNOM DDE بيقيس ضغط التعليق الهوائي. GNOM DP CAN بيقيس حركة التعليق الميكانيكي بذراع؛ بنختار حسب المحور.",
+        "risk": "الاتنين مش نفس الحساس ولا نفس التوصيل: DDE بيطلع جهد تماثلي، وDP CAN بيبعت رسائل CAN.",
+        "test": "بنعمل معايرة والناقلة فاضية ومحملة، ونقارن بميزان مرجعي بعد استقرارها على أرض مناسبة.",
+        "docs": "https://dc.jv-technoton.com/wp-content/uploads/2026/01/GNOM_operation_manual.pdf",
+        "extra": "حسب دليل GNOM: تغذية DDE من 8 إلى 32 فولت وخرجه 0.25–3.8 فولت. DP CAN محتاج 18–32 فولت وواجهة CAN J1939. الاتنين مش بيتوصلوا بنفس مدخل القياس.",
+        "url": "https://e-shop.jv-technoton.com/product/gnom-dp-can/",
+        "commercial_status": "السعر والتوفر والضمان المحلي لسه محتاجين عرض رسمي من المورد. المقارنة دي مش تأكيد شراء أو اعتماد نهائي للجهاز.",
+        "explanation": "دول نوعين مختلفين: DDE لضغط التعليق الهوائي، وDP CAN لحركة التعليق الميكانيكي. بنختار المناسب، وبنحوّل القراءة لتقدير حمولة بعد المعايرة.",
+        "specExplanation": "المعايرة معناها نقارن قراءة الحساس بأوزان معروفة، ونظبط الحساب على نفس الناقلة ونظام التعليق.",
+        "reviewedAt": "2026-10-02",
+        "docsLabel": "المواصفات والوثائق",
+        "photos": [
+          {
+            "file": "gnom.jpg",
+            "label": "GNOM DDE / DP CAN",
+            "caption": "GNOM DP — شكل عائلة حساس الحركة؛ كود DP CAN بيتأكد من ملصق الجهاز.",
+            "credit": "Technoton",
+            "sourcePage": "https://e-shop.jv-technoton.com/product/gnom-dp-can/",
+            "width": 340,
+            "height": 340
+          },
+          {
+            "file": "gnomdde.jpg",
+            "label": "GNOM DDE",
+            "caption": "GNOM DDE — حساس ضغط للتعليق الهوائي.",
+            "credit": "Technoton",
+            "sourcePage": "https://e-shop.jv-technoton.com/product/gnom-dde/",
+            "width": 300,
+            "height": 300
+          }
+        ]
+      },
+      {
+        "key": "airweigh",
+        "company": "Air-Weigh",
+        "model": "LoadMaxx / LoadMaxx Plus",
+        "spec": "On-board weighing · CAN / J1708",
+        "install": "ده نظام وزن بشاشة وحساسات، ومكونات القاطرة والمقطورة بتتحدد حسب التعليق وعدد المحاور.",
+        "risk": "الصورة بتبين شاشة الكابينة، مش طقم الحساسات كله. لازم نراجع طريقة إخراج القراءات لبرنامجنا.",
+        "test": "بنعمل معايرة فارغ ومحمل، ونجرب تبديل المقطورة لو ده جزء من التشغيل.",
+        "docs": "https://www.air-weigh.com/loadmaxx/",
+        "extra": "الشركة بتذكر تغذية 12–36 فولت وحرارة 0–50 درجة للمنتج في صفحة LoadMaxx. بنراجع حدود كل جزء في الحزمة ومكان تركيبه، وما نعممش مواصفات الشاشة على كل الحساسات.",
+        "url": "https://www.air-weigh.com/loadmaxx/",
+        "commercial_status": "السعر والتوفر والضمان المحلي لسه محتاجين عرض رسمي من المورد. المقارنة دي مش تأكيد شراء أو اعتماد نهائي للجهاز.",
+        "explanation": "ده نظام لقياس الحمولة على المركبة. بنراجع توافقه مع التعليق وطريقة قراءة بياناته محليًا.",
+        "specExplanation": "المعايرة معناها نقارن قراءة الحساس بأوزان معروفة، ونظبط الحساب على نفس الناقلة ونظام التعليق.",
+        "reviewedAt": "2026-10-02",
+        "docsLabel": "المواصفات والوثائق",
+        "photos": [
+          {
+            "file": "airweigh.jpg",
+            "label": "LoadMaxx / LoadMaxx Plus",
+            "caption": "شاشة LoadMaxx جوّه الكابينة؛ الحساسات وباقي الطقم مش ظاهرين.",
+            "credit": "Air-Weigh",
+            "sourcePage": "https://www.air-weigh.com/loadmaxx/",
+            "width": 683,
+            "height": 683
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "قارئ البصمة: مين السائق اللي بدأ العملية؟",
+    "decision": "القارئ بياخد البصمة، والنظام بيقارنها بالسائقين المتسجلين حسب صلاحياتهم. توصيل القارئ لوحده مش كفاية؛ محتاج برنامج متوافق وإعداد صحيح.",
+    "products": [
+      {
+        "key": "xperix",
+        "company": "Xperix",
+        "model": "BioMini Slim 2S",
+        "spec": "USB 2.0 · HID protocol · On-device matching",
+        "install": "بيتوصّل بـ USB لوحدة المعالجة، وبيتثبت في متناول السائق وهو واقف.",
+        "risk": "IP65 هنا يخص منطقة سطح الحساس؛ مش معناه إن الجهاز كله محمي بنفس الدرجة أو معتمد للناقلة.",
+        "test": "بنجرب قراءة ناجحة وفاشلة، وفصل الكابل، وصلاحيات سائق مسموح له وآخر غير مسموح له.",
+        "docs": "https://www.xperix.com/support/document-library",
+        "extra": "يدعم المطابقة على الجهاز حسب طريقة الدمج. دعم USB ما يغنيش عن برنامج متوافق وإعداد التسجيل والصلاحيات.",
+        "url": "https://www.xperix.com/products/biomini-slim-2s",
+        "commercial_status": "السعر والتوفر والضمان المحلي لسه محتاجين عرض رسمي من المورد. المقارنة دي مش تأكيد شراء أو اعتماد نهائي للجهاز.",
+        "explanation": "ده قارئ بصمة بيتوصل بـ USB. بنراجع توافق برنامجه مع وحدة المعالجة وطريقة تسجيل ومطابقة بصمة السائق.",
+        "specExplanation": "دعم USB معناه طريقة التوصيل. دعم المطابقة ومكان حفظ بيانات البصمة بيتحددوا حسب الجهاز والبرنامج.",
+        "reviewedAt": "2026-10-02",
+        "docsLabel": "المواصفات والوثائق",
+        "photos": [
+          {
+            "file": "xperix.png",
+            "label": "BioMini Slim 2S",
+            "caption": "صورة BioMini Slim 2S من صفحة المنتج.",
+            "credit": "Xperix",
+            "sourcePage": "https://www.xperix.com/products/biomini-slim-2s",
+            "width": 930,
+            "height": 560
+          }
+        ]
+      },
+      {
+        "key": "hid",
+        "company": "HID",
+        "model": "DigitalPersona 4500",
+        "spec": "Optical USB reader · Host SDK",
+        "install": "بيتوصّل بـ USB لجهاز مضيف عليه برنامج متوافق مع أدوات DigitalPersona.",
+        "risk": "الشركة بتقدمه كقارئ مكتبي؛ ملاءمة الحرارة والاهتزاز جوّه الكابينة محتاجة مراجعة.",
+        "test": "بنجرب القراءة وتسجيل المستخدمين وفصل USB، ونتأكد إن التراخيص المطلوبة موجودة.",
+        "docs": "https://sdk.hidglobal.com/sites/default/files/dtk/iam-digitalpersona-sdk-windows-ds-en_0.pdf",
+        "extra": "القارئ لوحده مش نظام هوية كامل. المضيف والبرنامج هما اللي بينظموا التسجيل والتحقق وربط النتيجة بالرحلة.",
+        "url": "https://www.hidglobal.com/products/4500-fingerprint-reader",
+        "commercial_status": "السعر والتوفر والضمان المحلي لسه محتاجين عرض رسمي من المورد. المقارنة دي مش تأكيد شراء أو اعتماد نهائي للجهاز.",
+        "explanation": "ده قارئ بصمة USB. قبل تركيبه في الكابينة بنراجع تحمل الحرارة والاهتزاز وتوافق البرنامج.",
+        "specExplanation": "دعم USB معناه طريقة التوصيل. دعم المطابقة ومكان حفظ بيانات البصمة بيتحددوا حسب الجهاز والبرنامج.",
+        "reviewedAt": "2026-10-02",
+        "docsLabel": "المواصفات والوثائق",
+        "photos": [
+          {
+            "file": "hid.png",
+            "label": "DigitalPersona 4500",
+            "caption": "صورة DigitalPersona 4500 من صفحة المنتج.",
+            "credit": "HID",
+            "sourcePage": "https://www.hidglobal.com/products/4500-fingerprint-reader",
+            "width": 200,
+            "height": 200
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "وحدة قراءة الحساسات: بنفهم إشارة الحساس إزاي؟",
+    "decision": "الوحدة بتستقبل إشارة كهربائية من الحساس وتحولها لقراءة يقدر النظام يستخدمها. لازم نوع المدخل يطابق نوع الإشارة.",
+    "products": [
+      {
+        "key": "adam",
+        "company": "Advantech",
+        "model": "ADAM-6017-D",
+        "spec": "8 AI + 2 DO · 16-bit · Ethernet",
+        "install": "بيتثبت في حاوية محمية، وبنختار مجال الجهد أو التيار المناسب للحساس قبل التوصيل.",
+        "risk": "فيه مداخل تماثلية ومخرجين رقميين، لكن مفيهوش مدخل رقمي لحساس فتح الغطا. محتاج مدخل منفصل للوظيفة دي.",
+        "test": "بنوصل قيم معروفة ونقارن القراءة، وبعدها نجرب فقد الإشارة ورجوع الشبكة.",
+        "docs": "https://www.advantech.com.cn/zh-cn/support/details/manual?id=1-NYXXL3",
+        "extra": "معدل العينات المكتوب إجمالي للقنوات، مش لكل قناة. دعم بروتوكولات الربط بيتراجع حسب إصدار الجهاز والبرنامج. التكلفة النهائية بتتحدد بعرض حديث يشمل التوصيل والتركيب والضمان.",
+        "url": "https://www.advantech.com/en-us/products/a67f7853-013a-4b50-9b20-01798c56b090/adam-6017/mod_426ac8aa-4c77-4e4e-aed7-b41b9b387cf9",
+        "commercial_status": "السعر والتوفر والضمان المحلي لسه محتاجين عرض رسمي من المورد. المقارنة دي مش تأكيد شراء أو اعتماد نهائي للجهاز.",
+        "explanation": "دي وحدة لقراءة إشارات تماثلية من الحساسات عبر الشبكة. الموديل ده مش بديل لمدخل رقمي لحساس فتح الغطا.",
+        "specExplanation": "AI مدخل لقراءة قيمة متغيرة، زي الجهد. DI مدخل لحالة فتح أو قفل. DO مخرج للتحكم؛ ما ينفعش نستخدمه بدل المدخل.",
+        "reviewedAt": "2026-10-02",
+        "docsLabel": "المواصفات والوثائق",
+        "photos": [
+          {
+            "file": "adam.jpg",
+            "label": "ADAM-6017-D",
+            "caption": "صورة عائلة ADAM-6017؛ إصدار D بيتحدد في رقم الطلب.",
+            "credit": "Advantech",
+            "sourcePage": "https://www.advantech.com/en-us/products/a67f7853-013a-4b50-9b20-01798c56b090/adam-6017/mod_426ac8aa-4c77-4e4e-aed7-b41b9b387cf9",
+            "width": 220,
+            "height": 220
+          }
+        ]
+      },
+      {
+        "key": "moxa",
+        "company": "Moxa",
+        "model": "ioLogik E1240 / E1240-T",
+        "spec": "8 AI · Modbus TCP · 2 × Ethernet",
+        "install": "بيحوّل إشارات الجهد أو التيار لبيانات على الشبكة. نسخة الحرارة الممتدة لازم نطلبها بكودها.",
+        "risk": "ده مش محول CAN، ومفيهوش مدخل رقمي لحساس الغطا. لازم كل حساس يلاقي الواجهة المناسبة.",
+        "test": "بنجرب كل القنوات مع بعض، ونقيس سرعة تحديث القراءات ونشوف التصرف عند فقد الشبكة.",
+        "docs": "https://www.moxa.com/Moxa/media/PDIM/S100000327/moxa-iologik-e1200-series-manual-v15.2.pdf",
+        "extra": "معدل 12 عينة في الثانية مشترك بين القنوات: لو الثمانية شغالين، نصيب كل قناة 1.5 عينة في الثانية. E1240 العادي مختلف عن E1240-T في نطاق حرارة التشغيل.",
+        "url": "https://www.moxa.com/en/products/industrial-edge-connectivity/controllers-and-ios/universal-controllers-and-i-os/iologik-e1200-series/iologik-e1240",
+        "commercial_status": "السعر والتوفر والضمان المحلي لسه محتاجين عرض رسمي من المورد. المقارنة دي مش تأكيد شراء أو اعتماد نهائي للجهاز.",
+        "explanation": "دي وحدة لقراءة إشارات تماثلية عبر الشبكة. لازم نختار نسخة الحرارة المناسبة ونراجع سرعة أخذ القراءات.",
+        "specExplanation": "AI مدخل لقراءة قيمة متغيرة، زي الجهد. DI مدخل لحالة فتح أو قفل. DO مخرج للتحكم؛ ما ينفعش نستخدمه بدل المدخل.",
+        "reviewedAt": "2026-10-02",
+        "docsLabel": "المواصفات والوثائق",
+        "photos": [
+          {
+            "file": "moxa.jpg",
+            "label": "ioLogik E1240 / E1240-T",
+            "caption": "صورة ioLogik E1240؛ نسخة T ليها نطاق حرارة مختلف.",
+            "credit": "Moxa",
+            "sourcePage": "https://www.moxa.com/en/products/industrial-edge-connectivity/controllers-and-ios/universal-controllers-and-i-os/iologik-e1200-series/iologik-e1240",
+            "width": 456,
+            "height": 456
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "سويتش الشبكة: بنوصل الأجهزة ببعض إزاي؟",
+    "decision": "السويتش بيربط أجهزة الشبكة بكابلات. وبعض المنافذ تقدر توصل كهرباء وبيانات في نفس الكابل، لو الجهاز المتوصل متوافق معاها.",
+    "products": [
+      {
+        "key": "tsw",
+        "company": "Teltonika Networks",
+        "model": "TSW101",
+        "spec": "4 × PoE+ · 5 × GbE · 9–30 VDC",
+        "install": "الراوتر بيتوصّل بالمنفذ الخامس، والأجهزة المتوافقة مع PoE بالمنافذ المخصصة للتغذية.",
+        "risk": "ميزانية الكهرباء مش 60 وات في كل الظروف: الدليل بيذكر 30 وات إجمالي عند دخل 12 فولت، و60 وات عند 24 فولت.",
+        "test": "بنشغّل الكاميرات كلها، خصوصًا إضاءة الليل، ونقيس إجمالي الاستهلاك وهبوط الجهد.",
+        "docs": "https://wiki.teltonika-networks.com/view/TSW101_First_Start",
+        "extra": "الحد لكل منفذ 30 وات مع الالتزام بالحد الإجمالي ومصدر التغذية. السويتش غير مُدار، يعني مش بيوفر إعدادات إدارة الشبكة الموجودة في السويتش المُدار.",
+        "url": "https://www.teltonika-networks.com/products/ethernet-switches/tsw101",
+        "commercial_status": "السعر والتوفر والضمان المحلي لسه محتاجين عرض رسمي من المورد. المقارنة دي مش تأكيد شراء أو اعتماد نهائي للجهاز.",
+        "explanation": "ده سويتش صغير لربط الأجهزة، وفيه منافذ لتغذية أجهزة متوافقة عبر كابل الشبكة. لازم إجمالي الاستهلاك يناسب قدرته.",
+        "specExplanation": "أربع منافذ ممكن تغذي أجهزة متوافقة. إجمالي الحمل المسموح بيتغير حسب جهد الدخل: 30 وات عند 12 فولت، و60 وات عند 24 فولت حسب الدليل.",
+        "reviewedAt": "2026-10-02",
+        "docsLabel": "المواصفات والوثائق",
+        "photos": [
+          {
+            "file": "tsw.png",
+            "label": "TSW101",
+            "caption": "صورة TSW101 من صفحة المنتج.",
+            "credit": "Teltonika Networks",
+            "sourcePage": "https://www.teltonika-networks.com/products/ethernet-switches/tsw101",
+            "width": 1920,
+            "height": 2138
+          }
+        ]
+      },
+      {
+        "key": "planet",
+        "company": "PLANET Technology",
+        "model": "IGS-5225-8P4S-12V",
+        "spec": "8 × PoE+ · Managed · 12–54 VDC",
+        "install": "بيتثبت في حاوية مناسبة، وبيتوصّل بمصدر كهرباء محسوب على استهلاك الأجهزة كلها.",
+        "risk": "قدرة التغذية القصوى مش متاحة تلقائيًا مع أي مصدر. وتصنيف IP30 محتاج مكان تركيب محمي.",
+        "test": "بنجرب كل منافذ الكاميرات وسياسات الشبكة، ونتأكد من معيار التغذية المطلوب لكل كاميرا.",
+        "docs": "https://www.planet.com.tw/en/product/igs-5225-8p4s-12v#download",
+        "extra": "فيه 8 منافذ PoE+ و4 منافذ SFP. SFP مكان لتركيب وحدة اتصال مناسبة، ومش معناه إن وحدات الألياف داخلة في الحزمة.",
+        "url": "https://www.planet.com.tw/en/product/igs-5225-8p4s-12v",
+        "commercial_status": "السعر والتوفر والضمان المحلي لسه محتاجين عرض رسمي من المورد. المقارنة دي مش تأكيد شراء أو اعتماد نهائي للجهاز.",
+        "explanation": "ده سويتش قابل للإدارة، مناسب لما نحتاج تحكم أكتر في الشبكة. بنراجع مصدر الكهرباء وقدرة المنافذ مع الأجهزة الفعلية.",
+        "specExplanation": "PoE معناها كهرباء مع البيانات في كابل الشبكة. لازم نراجع قدرة المنفذ وإجمالي قدرة السويتش، مش عدد المنافذ بس.",
+        "reviewedAt": "2026-10-02",
+        "docsLabel": "المواصفات والوثائق",
+        "photos": [
+          {
+            "file": "planet.jpg",
+            "label": "IGS-5225-8P4S-12V",
+            "caption": "صورة IGS-5225-8P4S-12V من صفحة المنتج.",
+            "credit": "PLANET Technology",
+            "sourcePage": "https://www.planet.com.tw/en/product/igs-5225-8p4s-12v",
+            "width": 500,
+            "height": 500
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "الهوائيات: بنحسن استقبال الشبكة والمكان إزاي؟",
+    "decision": "الهوائيات بتتوصل بالراوتر أو مستقبل تحديد المكان، وبتتركب في مكان مناسب على المركبة. اختيارها بيعتمد على الترددات والمنافذ والكابلات.",
+    "products": [
+      {
+        "key": "poynting",
+        "company": "POYNTING",
+        "model": "MIMO-3-17 / V2-17",
+        "spec": "4 × Cellular + 2 × Wi-Fi + GPS/GLONASS",
+        "install": "بيتثبت على السقف، وكابلاته بتتوصّل بمنافذ المحمول والواي فاي والموقع المطابقة.",
+        "risk": "مدى المحمول المنشور 410–3800 ميجاهرتز، فمش بيغطي كل نطاق 5G ممكن يدعمه الراوتر.",
+        "test": "بنطابق التردد والفيش وطول الكابل، ونقارن الاستقبال والناقلة فاضية ومحملة.",
+        "docs": "https://poynting.tech/antennas/mimo-3-17/",
+        "extra": "فيه 4 عناصر للمحمول و2 للواي فاي وعنصر GPS/GLONASS. لو كل مودم محتاج 4 كابلات، مودمين محتاجين خطة هوائيات تغطي 8 مسارات للمحمول.",
+        "url": "https://poynting.tech/antennas/mimo-3-17/",
+        "commercial_status": "السعر والتوفر والضمان المحلي لسه محتاجين عرض رسمي من المورد. المقارنة دي مش تأكيد شراء أو اعتماد نهائي للجهاز.",
+        "explanation": "ده هوائي مجمع فيه عناصر لخدمات مختلفة. بنطابق الترددات وعدد الكابلات مع الراوتر اللي هنختاره.",
+        "specExplanation": "عدد العناصر داخل الهوائي مش هو عدد الشبكات النشطة. كل مودم محتاج توصيلاته المطابقة لدليله.",
+        "reviewedAt": "2026-10-02",
+        "docsLabel": "المواصفات والوثائق",
+        "photos": [
+          {
+            "file": "poynting.png",
+            "label": "MIMO-3-17 / V2-17",
+            "caption": "عائلة MIMO-3؛ اللون وكود النسخة بيتحددوا عند الطلب.",
+            "credit": "POYNTING",
+            "sourcePage": "https://poynting.tech/antennas/mimo-3-17/",
+            "width": 370,
+            "height": 250
+          }
+        ]
+      },
+      {
+        "key": "panorama",
+        "company": "Panorama Antennas",
+        "model": "MAKO 5G / LGMHM4B-6-60",
+        "spec": "4 × Cellular · Optional Wi-Fi / GNSS",
+        "install": "هوائي سقفي، ورقم الطلب الكامل بيحدد عناصر الواي فاي والموقع والكابلات.",
+        "risk": "شكل القبة لوحده ما يوضحش التكوين الداخلي؛ الصورة لعائلة MAKO والنسخة المطلوبة لازم تتحدد.",
+        "test": "بنراجع توافق كل كابل مع الراوتر، وثبات التركيب ومنع تسرب المياه وأداء الاستقبال.",
+        "docs": "https://panorama-antennas.com/product/lgmhm4b-6-60-24-58-mako-4x4-mimo-4g-5g-up-to-6x6-mimo-wifi-gps-gnss-vehicle-antenna/",
+        "extra": "اختيار مكانه بيتأثر بحجب العربيات المحملة والمسافة بين الهوائيات. تفاصيل النسخة بنثبتها من ورقة بيانات رقم الطلب.",
+        "url": "https://panorama-antennas.com/product/lgmhm4b-6-60-24-58-mako-4x4-mimo-4g-5g-up-to-6x6-mimo-wifi-gps-gnss-vehicle-antenna/",
+        "commercial_status": "السعر والتوفر والضمان المحلي لسه محتاجين عرض رسمي من المورد. المقارنة دي مش تأكيد شراء أو اعتماد نهائي للجهاز.",
+        "explanation": "ده هوائي مجمع، وتفاصيله بتختلف حسب رقم الطلب. بنحدد الكابلات والموصلات والخدمات المطلوبة قبل الشراء.",
+        "specExplanation": "عدد العناصر داخل الهوائي مش هو عدد الشبكات النشطة. كل مودم محتاج توصيلاته المطابقة لدليله.",
+        "reviewedAt": "2026-10-02",
+        "docsLabel": "المواصفات والوثائق",
+        "photos": [
+          {
+            "file": "panorama.jpg",
+            "label": "MAKO 5G / LGMHM4B-6-60",
+            "caption": "مثال من عائلة MAKO؛ الكابلات والعناصر حسب رقم الطلب.",
+            "credit": "Panorama Antennas",
+            "sourcePage": "https://panorama-antennas.com/product/lgmhm4b-6-60-24-58-mako-4x4-mimo-4g-5g-up-to-6x6-mimo-wifi-gps-gnss-vehicle-antenna/",
+            "width": 2160,
+            "height": 2160
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "حساس فتح الصندوق: بنعرف إن الغطا اتفتح إزاي؟",
+    "decision": "مفتاح صغير بيغير حالته لما الغطا يتفتح أو يتقفل. النظام بيقرأ التغير ويسجل تنبيه لو التوصيل والإعداد بيدعموا ده.",
+    "products": [
+      {
+        "key": "d2hw",
+        "company": "ARATAS / formerly OMRON",
+        "model": "D2HW series",
+        "url": "https://www.aratas.com/us-en/products/switches/D2HW",
+        "docs": "https://components.omron.com/us-en/datasheet_pdf/B105-E1.pdf",
+        "spec": "Sealed microswitch · Mechanical contact",
+        "install": "بيتثبت خلف غطا الصندوق، وبيتوصّل بمدخل رقمي مناسب لدائرة منخفضة الجهد.",
+        "risk": "شكل الذراع وطول حركته بيختلفوا حسب الكود. ضبطه غلط ممكن يعمل تنبيهات مع اهتزاز الغطا.",
+        "test": "بنفتح ونقفل الغطا كذا مرة، ونجرب فصل السلك حسب طريقة مراقبة الدائرة.",
+        "extra": "D2HW وD2HW-AQ عائلتين مختلفتين؛ ما ننقلش مواصفات واحدة للتانية. بنحدد الأطراف وشكل المشغّل وكود الشراء بعد اختيار الحاوية.",
+        "commercial_status": "السعر والتوفر والضمان المحلي لسه محتاجين عرض رسمي من المورد. المقارنة دي مش تأكيد شراء أو اعتماد نهائي للجهاز.",
+        "explanation": "ده مفتاح صغير ممكن نستعمله لمتابعة فتح الصندوق. شكل الذراع وطريقة تثبيته لازم يناسبوا حركة الغطا.",
+        "specExplanation": "حالة المفتاح لوحدها ممكن ما تفرقش بين فتح الغطا وقطع السلك؛ اكتشاف العبث بالسلك محتاج تصميم واختبار مناسبين.",
+        "reviewedAt": "2026-10-02",
+        "docsLabel": "المواصفات والوثائق",
+        "photos": [
+          {
+            "file": "d2hw.jpg",
+            "label": "D2HW series",
+            "caption": "D2HW-A201D — مثال من عائلة D2HW بزر ضغط وأطراف PCB.",
+            "credit": "RS / OMRON",
+            "sourcePage": "https://uk.rs-online.com/web/p/micro-switches/6160366",
+            "width": 1200,
+            "height": 1010
+          }
+        ]
+      },
+      {
+        "key": "zw",
+        "company": "Honeywell",
+        "model": "MICRO SWITCH ZW series",
+        "url": "https://automation.honeywell.com/us/en/products/sensing-solutions/switches-and-controls/basic-switches/zw-series-sealed-subminiature-basic-switch",
+        "docs": "https://prod-edam.honeywell.com/content/dam/honeywell-edam/sps/siot/en-us/products/switches/basic-switches/subminiature-basic-switches/zw-series/documents/sps-siot-micro-switch-zw-basic-product-sheet-004989-2-en-ciid-151138.pdf",
+        "spec": "Sealed microswitch · Prewired IP67 option",
+        "install": "بنختار شكل الذراع والأسلاك حسب حركة الغطا ومكان التثبيت.",
+        "risk": "تصنيف IP67 مرتبط بالنسخ ذات الأسلاك المدمجة حسب الشركة؛ مش كل نسخة بنفس الحماية.",
+        "test": "بنجرب حالة الفتح والقفل وقطع السلك، ونتأكد إن اهتزاز نقطة التلامس ما يعملش أحداث متكررة.",
+        "extra": "الصورة مثال من عائلة ZW. تمييز قطع السلك عن فتح الغطا محتاج دائرة مناسبة؛ المفتاح لوحده مش كفاية.",
+        "commercial_status": "السعر والتوفر والضمان المحلي لسه محتاجين عرض رسمي من المورد. المقارنة دي مش تأكيد شراء أو اعتماد نهائي للجهاز.",
+        "explanation": "ده مفتاح ميكانيكي لمتابعة وضع الغطا. بنختار النسخة وطريقة التوصيل المناسبة ونختبر الفتح والقفل وفصل السلك.",
+        "specExplanation": "حالة المفتاح لوحدها ممكن ما تفرقش بين فتح الغطا وقطع السلك؛ اكتشاف العبث بالسلك محتاج تصميم واختبار مناسبين.",
+        "reviewedAt": "2026-10-02",
+        "docsLabel": "المواصفات والوثائق",
+        "photos": [
+          {
+            "file": "zw.png",
+            "label": "MICRO SWITCH ZW series",
+            "caption": "مثال ZW50F90DW1 من عائلة ZW؛ شكل الذراع حسب النسخة.",
+            "credit": "Honeywell",
+            "sourcePage": "https://automation.honeywell.com/us/en/products/sensing-solutions/switches-and-controls/basic-switches/zw-series-sealed-subminiature-basic-switch",
+            "width": 576,
+            "height": 576
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "الطاقة الاحتياطية: إيه اللي يفضل شغال لو الكهرباء اتقطعت؟",
+    "decision": "البطارية الاحتياطية بتشغل أحمال محددة لمدة بتعتمد على استهلاكها وسعة البطارية. مش بنفترض إنها تشغل كل النظام.",
+    "products": [
+      {
+        "key": "bat120",
+        "company": "Teltonika Networks",
+        "model": "BAT120",
+        "url": "https://www.teltonika-networks.com/products/accessories/powering-options/bat120-uninterruptible-power-supply",
+        "docs": "https://wiki.teltonika-networks.com/view/QSG_BAT120",
+        "spec": "17 Wh · 12 V battery output · 22 W max",
+        "install": "بيتوصّل بين مصدر الكهرباء وجهاز مناسب لخرج البطارية، مع تثبيت وتهوية حسب الدليل.",
+        "risk": "في وضع البطارية الخرج 12 فولت، والحد 22 وات / 1.8 أمبير. ما ينفعش نفترض إنه يشغل كل أجهزة الناقلة.",
+        "test": "بنفصل الكهرباء الأساسية ونقيس وقت التشغيل بالحمل الفعلي وحرارة المكان.",
+        "extra": "مدة التشغيل بتتغير حسب الاستهلاك وحالة البطارية. خرج 12 فولت ما يكفيش مباشرة لحساس DP CAN اللي محتاج 18 فولت على الأقل.",
+        "commercial_status": "السعر والتوفر والضمان المحلي لسه محتاجين عرض رسمي من المورد. المقارنة دي مش تأكيد شراء أو اعتماد نهائي للجهاز.",
+        "explanation": "دي وحدة احتياطية لأحمال محدودة. لازم نتأكد إن جهدها وقدرتها يناسبوا الجهاز المطلوب تشغيله وقت انقطاع الكهرباء.",
+        "specExplanation": "بنحسب استهلاك الأجهزة اللي عايزينها تفضل شغالة، ونراجع الجهد والحرارة ووقت التشغيل باختبار فعلي.",
+        "reviewedAt": "2026-10-02",
+        "docsLabel": "المواصفات والوثائق",
+        "photos": [
+          {
+            "file": "bat120.png",
+            "label": "BAT120",
+            "caption": "صورة BAT120 من صفحة المنتج.",
+            "credit": "Teltonika Networks",
+            "sourcePage": "https://www.teltonika-networks.com/products/accessories/powering-options/bat120-uninterruptible-power-supply",
+            "width": 1920,
+            "height": 1280
+          }
+        ]
+      },
+      {
+        "key": "openups",
+        "company": "Mini-Box",
+        "model": "OpenUPS",
+        "url": "https://www.mini-box.com/OpenUPS",
+        "docs": "https://resources.mini-box.com/online/PWR-OpenUPS/PWR-OpenUPS-manual.pdf",
+        "spec": "6–30 V input · 5–24 V output · USB API",
+        "install": "لوحة محتاجة بطارية وحاوية وتوصيلات وحماية مناسبة؛ مش وحدة جاهزة للتركيب لوحدها.",
+        "risk": "لازم نظبط جهد الخرج ونوع البطارية والشحن. القدرة الفعلية بتتأثر بالحمل والحرارة.",
+        "test": "بنجرب التحويل للبطارية والرجوع للمصدر، وحد فصل البطارية وحرارة المكونات.",
+        "extra": "دخل 6–30 فولت وخرج قابل للضبط 5–24 فولت، والضبط الافتراضي 12 فولت. تحمل كهرباء المركبة والضمان والتغليف النهائي لازم يتراجعوا للتجميعة كاملة.",
+        "commercial_status": "السعر والتوفر والضمان المحلي لسه محتاجين عرض رسمي من المورد. المقارنة دي مش تأكيد شراء أو اعتماد نهائي للجهاز.",
+        "explanation": "دي لوحة لإدارة طاقة احتياطية، مش صندوق جاهز للتركيب لوحده. محتاجة بطارية وحماية وتغليف وتصميم مناسبين.",
+        "specExplanation": "بنحسب استهلاك الأجهزة اللي عايزينها تفضل شغالة، ونراجع الجهد والحرارة ووقت التشغيل باختبار فعلي.",
+        "reviewedAt": "2026-10-02",
+        "docsLabel": "المواصفات والوثائق",
+        "photos": [
+          {
+            "file": "openups.jpg",
+            "label": "OpenUPS",
+            "caption": "صورة OpenUPS من صفحة المنتج.",
+            "credit": "Mini-Box",
+            "sourcePage": "https://www.mini-box.com/OpenUPS",
+            "width": 350,
+            "height": 274
+          }
+        ]
+      }
+    ]
+  }
+]

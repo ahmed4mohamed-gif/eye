@@ -1,0 +1,18 @@
+(()=>{'use strict';
+const manifest=__MANIFEST__,modules=__MODULES__,entry=document.currentScript.dataset.entry;
+const initialKeys=Object.keys(manifest).filter(k=>k.startsWith('models/environment/')||k.startsWith('environments/')||(k.startsWith('models/operation/')&&(entry==='operation.js'||!/(yard|driver)\.glb$/.test(k))));
+const expected=initialKeys.reduce((n,k)=>n+manifest[k].bytes,0),received=new Map();
+function progress(key,bytes){if(!initialKeys.includes(key))return;received.set(key,bytes);const done=[...received.values()].reduce((a,b)=>a+b,0),percent=Math.min(100,Math.floor(done/expected*100));const bar=document.querySelector('#boot-progress'),text=document.querySelector('#boot-percent');if(bar)bar.value=percent;if(text)text.textContent=percent+'% من ملفات المشهد';}
+let queue=Promise.resolve();const pending=new Map(),inflight=new Map();
+globalThis.__ainChunk=(key,encoded)=>{const slot=pending.get(key);if(!slot)throw Error('Unexpected asset chunk');const decoded=atob(encoded);if(slot.offset+decoded.length>slot.bytes.length)throw Error('Asset overflow');for(let i=0;i<decoded.length;i++)slot.bytes[slot.offset++]=decoded.charCodeAt(i);progress(key,slot.offset);};
+function script(src){return new Promise((resolve,reject)=>{const s=document.createElement('script');s.src=src;s.onload=()=>{s.remove();resolve()};s.onerror=()=>{s.remove();reject(Error('ملف ناقص: '+src))};document.head.append(s)})}
+function keyFor(input){try{const path=decodeURIComponent(new URL(input,location.href).pathname);return Object.keys(manifest).find(k=>path.endsWith('/'+k))}catch{return null}}
+function read(key){if(inflight.has(key))return inflight.get(key);const task=queue.then(async()=>{const slot={bytes:new Uint8Array(manifest[key].bytes),offset:0};pending.set(key,slot);try{for(const part of manifest[key].parts)await script('./local-assets/'+part);if(slot.offset!==slot.bytes.length)throw Error('Incomplete asset');return new Blob([slot.bytes],{type:manifest[key].mime})}finally{pending.delete(key)}});queue=task.catch(()=>{});inflight.set(key,task);task.then(()=>inflight.delete(key),()=>inflight.delete(key));return task;}
+
+const originalFetch=globalThis.fetch.bind(globalThis);
+globalThis.fetch=async(input,init)=>{const url=typeof input==='string'?input:input instanceof URL?input.href:input.url,key=keyFor(url);if(key)return new Response(await read(key),{status:200,headers:{'Content-Type':manifest[key].mime}});const protocol=new URL(url,location.href).protocol;if(protocol==='http:'||protocol==='https:'||protocol==='file:')throw Error('الأصل المطلوب مش موجود في ملفات المشروع المحلي: '+url);return originalFetch(input,init)};
+const imports={};for(const [key,code] of Object.entries(modules)){imports[key]=URL.createObjectURL(new Blob([code],{type:'text/javascript'}));delete modules[key]}
+const map=document.createElement('script');map.type='importmap';map.textContent=JSON.stringify({imports});document.head.append(map);
+const start=document.createElement('script');start.type='module';start.textContent='import '+JSON.stringify('ain/'+entry)+';import "ain/glass.js";';document.body.append(start);
+globalThis.ainOffline={assetCount:Object.keys(manifest).length,entry,transport:'local-script-chunks',networkRequired:false};
+})();
