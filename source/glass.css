@@ -99,3 +99,18 @@ body.operation.ui-hidden .camera-controls{visibility:visible;pointer-events:auto
 body.operation.ui-hidden .ui-dock,body.operation.ui-hidden .seat-return,body.operation.ui-hidden #steering-horn{visibility:hidden;pointer-events:none}
 
 #ain-boot{position:fixed;inset:0;z-index:100000;display:grid;place-items:center;background:#10242b;color:#edf8f6;text-align:center;padding:24px}#ain-boot[hidden]{display:none}#ain-boot>div{width:min(440px,90vw)}#ain-boot h1{font-size:clamp(38px,6vw,64px);margin:16px 0}#ain-boot progress{width:100%;height:12px;accent-color:#79e7ce}#ain-boot p{line-height:1.8}#ain-boot button{padding:12px 24px;border-radius:14px}#loading,#load-screen{visibility:hidden}
+
+/* Stable text contrast over both bright sand and dark vehicles. */
+.inspector{background:linear-gradient(145deg,rgba(22,43,52,.96),rgba(13,30,39,.96));color:#f5faf9;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-color:#5b7780;scrollbar-color:#a1bbbF #192f39;scrollbar-width:auto;line-height:1.85;isolation:isolate}
+.inspector h2,.inspector h3,.inspector strong{color:#f5faf9}
+.inspector h2 span,.inspector .intro,.inspector .detail-copy,.inspector .panel-note,.inspector .muted,.inspector .device-button small,.inspector .stat-grid small{color:#d3e0e5;opacity:1}
+.inspector .eyebrow,.inspector .section-label,.inspector .text-button,.inspector a:not(.primary),.inspector .arrow{color:#9bf2df}
+.inspector .device-button{border:1px solid #58717b;background:#19333e;padding:14px 12px;margin:10px 0;border-radius:14px;gap:12px;min-height:64px}
+.inspector .device-button strong{font-size:15px;line-height:1.7}.inspector .device-button small{font-size:13px;line-height:1.8;margin-top:4px}
+.inspector .device-button:hover{background:#244853;border-color:#9bf2df}.inspector .device-button .num{background:#244b52;color:#bcfff0;min-width:36px}
+.inspector .intro{font-size:15px;line-height:1.95}.inspector .panel-note{font-size:13px;line-height:1.9}
+.inspector button,.inspector a{min-height:44px}.inspector :is(button,a,summary):focus-visible,.sidebar-toggle:focus-visible{outline:3px solid #b9ffec;outline-offset:4px}
+.inspector .primary{background:#8cebd5;color:#102b2d}.inspector .secondary,.inspector .instruction{background:#18343f;color:#e7f0f2;border-color:#58717b}
+@media(prefers-reduced-transparency:reduce){.inspector{background:#122b36;backdrop-filter:none;-webkit-backdrop-filter:none}}
+@media(prefers-contrast:more){.inspector{background:#0d2029;border:2px solid #b9ffec}.inspector p,.inspector small{color:#fff}}
+@media(prefers-reduced-motion:reduce){.inspector{transition:none}}

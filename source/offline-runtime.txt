@@ -10,9 +10,17 @@ function keyFor(input){try{const path=decodeURIComponent(new URL(input,location.
 function read(key){if(inflight.has(key))return inflight.get(key);const task=queue.then(async()=>{const slot={bytes:new Uint8Array(manifest[key].bytes),offset:0};pending.set(key,slot);try{for(const part of manifest[key].parts)await script('./local-assets/'+part);if(slot.offset!==slot.bytes.length)throw Error('Incomplete asset');return new Blob([slot.bytes],{type:manifest[key].mime})}finally{pending.delete(key)}});queue=task.catch(()=>{});inflight.set(key,task);task.then(()=>inflight.delete(key),()=>inflight.delete(key));return task;}
 
 const originalFetch=globalThis.fetch.bind(globalThis);
-globalThis.fetch=async(input,init)=>{const url=typeof input==='string'?input:input instanceof URL?input.href:input.url,key=keyFor(url);if(key)return new Response(await read(key),{status:200,headers:{'Content-Type':manifest[key].mime}});const protocol=new URL(url,location.href).protocol;if(protocol==='http:'||protocol==='https:'||protocol==='file:')throw Error('الأصل المطلوب مش موجود في ملفات المشروع المحلي: '+url);return originalFetch(input,init)};
+const hosted=/^https?:$/.test(new URL(location.href).protocol);
+function assetResponse(key,response){
+ if(!response.ok)throw Error('تعذّر تحميل الملف: '+key+' ('+response.status+')');
+ if(!response.body){progress(key,manifest[key].bytes);return response;}
+ const reader=response.body.getReader();let bytes=0;
+ return new Response(new ReadableStream({async pull(controller){try{const part=await reader.read();if(part.done){if(bytes!==manifest[key].bytes)throw Error('حجم ملف غير متطابق: '+key);progress(key,bytes);controller.close();return;}bytes+=part.value.byteLength;progress(key,bytes);controller.enqueue(part.value);}catch(error){controller.error(error);}},cancel(reason){return reader.cancel(reason)}}),{status:response.status,headers:response.headers});
+}
+
+globalThis.fetch=async(input,init)=>{const url=typeof input==='string'?input:input instanceof URL?input.href:input.url,key=keyFor(url);if(key&&hosted){const target=new URL('./source/'+key,location.href);target.searchParams.set('v',manifest[key].sha256.slice(0,20));return assetResponse(key,await originalFetch(target.href,{...init,signal:init?.signal??input?.signal,cache:'force-cache'}));}if(key)return new Response(await read(key),{status:200,headers:{'Content-Type':manifest[key].mime}});const protocol=new URL(url,location.href).protocol;if(protocol==='http:'||protocol==='https:'||protocol==='file:')throw Error('الأصل المطلوب مش موجود في ملفات المشروع المحلي: '+url);return originalFetch(input,init)};
 const imports={};for(const [key,code] of Object.entries(modules)){imports[key]=URL.createObjectURL(new Blob([code],{type:'text/javascript'}));delete modules[key]}
 const map=document.createElement('script');map.type='importmap';map.textContent=JSON.stringify({imports});document.head.append(map);
 const start=document.createElement('script');start.type='module';start.textContent='import '+JSON.stringify('ain/'+entry)+';import "ain/glass.js";';document.body.append(start);
-globalThis.ainOffline={assetCount:Object.keys(manifest).length,entry,transport:'local-script-chunks',networkRequired:false};
+globalThis.ainOffline={assetCount:Object.keys(manifest).length,entry,transport:hosted?'http-binary':'local-script-chunks',networkRequired:hosted};
 })();
